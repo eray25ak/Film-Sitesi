@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Öğrenci sayısını giriniz: ");
+        int ogrenciSayisi = int.Parse(Console.ReadLine());
+
+        int[] ogrno = new int[ogrenciSayisi];
+        int[] ogrpuan = new int[ogrenciSayisi];
+
+        for (int i = 0; i < ogrenciSayisi; i++)
+        {
+            Console.Write("Öğrenci numarasını giriniz: ");
+            ogrno[i] = int.Parse(Console.ReadLine());
+
+            Console.Write("Öğrenci puanını giriniz: ");
+            ogrpuan[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Puanları 70 ile 80 arasında olan öğrencilerin numaraları:");
+        for (int i = 0; i < ogrenciSayisi; i++)
+        {
+            if (ogrpuan[i] >= 70 && ogrpuan[i] <= 80)
+            {
+                Console.WriteLine(ogrno[i]);
+            }
+        }
+    }
+}
